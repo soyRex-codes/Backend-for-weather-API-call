@@ -1,0 +1,37 @@
+#create using: python3 -m venv venv
+#activate using: source .venv/bin/activate
+
+#deactivate using: deactivate
+
+#to make api calls using requests library in python:
+use: pip install requests and the import requests in your python file, 
+then use requests.get('your api url here in necessary format')
+and then use .json() method to get the json response, store it in a dictionary and print it using print() function.
+
+
+#security tip:
+#make sure to store your API key in a .env file and use the python-dotenv library to load it securely.
+#to install python-dotenv use: pip install python-dotenv
+#then in your python file use:
+from dotenv import load_dotenv
+import os
+load_dotenv()
+api_key = os.getenv('API_key')
+#then use this api_key variable in your api call url.
+
+
+
+#example code:
+#import requests
+#from dotenv import load_dotenv
+#import os
+#load_dotenv()
+#api_key = os.getenv('API_key')
+#response = requests.get(f'https://api.example.com/data?api_key={api_key}')
+#data = response.json()
+#print(data)
+#Make sure to add .env file to your .gitignore to avoid pushing sensitive information to version control.
+#Also, install requests library using: pip install requests
+#and python-dotenv using: pip install python-dotenv
+#Now you are set to make secure API calls using your virtual environment!
+
